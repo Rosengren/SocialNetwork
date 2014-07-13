@@ -9,6 +9,16 @@ class User < ActiveRecord::Base
   								:first_name, :last_name, :profile_name
   # attr_accessible :title, :body
 
+  # Ensure that first, last and profile names are entered when signing up
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :profile_name, presence: true,
+                           uniqueness: true,
+                           format: {
+                            with: /\A[a-zA-Z\-\_]+\Z/,
+                            message: "must be formatted correctly."
+                           }
+
   has_many :statuses
   
   def full_name
