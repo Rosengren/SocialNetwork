@@ -11,8 +11,33 @@
  *= require_self
  *= require_tree .
  */
+
 body {
 	padding-top: 50px;
+}
+
+.navbar {
+	background-color: white;
+	padding-top	: 5px;
+	padding-bottom	: 5px;
+}
+
+.main-header {
+	background-color: #27ae60;
+	padding: 80px 0 80px 60px; 
+	margin-bottom: 20px;
+}
+
+.main-header h1 {
+	color: #fff;
+	font-weight: 900;
+	font-size: 60px;
+}
+
+.main-header p {
+	font-size: 24px;
+	color: #ecf0f1;
+	padding-top: 8px;
 }
 
 .alert {

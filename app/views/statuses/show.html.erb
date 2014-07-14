@@ -1,15 +1,19 @@
+<%= render 'layouts/header', {header: @status.user.full_name, subheader: @status.content, feed: false} %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @status.user.full_name %>
-</p>
+<div class="container">
+<h1></h1>
+	<p>
+	  <b>Name:</b>
+	  <%= @status.user.full_name %>
+	</p>
 
-<p>
-  <b>Content:</b>
-  <%= @status.content %>
-</p>
-
+	<p>
+	  <b>Content:</b>
+	  <%= @status.content %>
+	</p>
 
 <%= link_to 'Edit', edit_status_path(@status) %> |
 <%= link_to 'Back', statuses_path %>
+</div>
+
